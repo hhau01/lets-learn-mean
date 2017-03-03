@@ -11,8 +11,7 @@ import { Component, OnInit } from '@angular/core';
                 (editClicked)="message.content = $event"
                 *ngFor="let message of messages"></app-message>
         </div>
-    `,
-    providers: [MessageService]
+    `
 })
 export class MessageListComponent implements OnInit {
     messages: Message[];
