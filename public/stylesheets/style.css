@@ -22,6 +22,7 @@ a.danger {
   margin-bottom: 20px;
 }
 
+/* when input is required */
 input.ng-invalid.ng-touched {
   border: 1px solid red;
 }
