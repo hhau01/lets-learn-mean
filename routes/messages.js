@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var jwt = require('jsonwebtoken');
-
 var User = require('../models/user');
 
 var Message = require('../models/message');
@@ -10,6 +9,7 @@ var Message = require('../models/message');
 router.get('', function(req, res, next) {
     // find all messages
     Message.find()
+    .populate('user', 'firstName')
         .exec(function(err, messages) {
             if (err) {
                 return res.status(500).json({
