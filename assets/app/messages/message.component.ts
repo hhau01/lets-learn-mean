@@ -35,4 +35,9 @@ export class MessageComponent {
                 result => console.log(result)
             );
     }
+
+    belongsToUser() {
+        // to provide better UX, important validation is in backend
+        return localStorage.getItem('userId') == this.message.userId;
+    }
 }
