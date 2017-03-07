@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
         <div class="col-md-8 col-md-offset-2">
             <app-message 
                 [message]="message" 
-                (editClicked)="message.content = $event"
                 *ngFor="let message of messages"></app-message>
         </div>
     `
