@@ -27,4 +27,8 @@ constructor(private http: Http) {}
     logout() {
         localStorage.clear();
     }
+
+    isLoggedIn() {
+        return localStorage.getItem('token') !== null;
+    }
 }

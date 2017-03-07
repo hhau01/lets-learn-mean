@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var jwt = require('jsonwebtoken');
 
 var Message = require('../models/message');
 
@@ -19,6 +20,20 @@ router.get('', function(req, res, next) {
                 obj: messages
             });
         });
+});
+
+// block unauthenticated users from reaching below routes
+router.use('/', function(req, res, next) {
+    jwt.verify(req.query.token, 'secret', function(err, decoded) {
+        if (err) {
+            // 401 - not authorized
+            return res.status(401).json({
+                title: 'Not Authenticated',
+                error: err
+            });
+        }
+        next();
+    });
 });
 
 router.post('/', function (req, res, next) {
