@@ -11,7 +11,9 @@ var messageRoutes = require('./routes/messages');
 var userRoutes = require('./routes/user');
 
 var app = express();
-mongoose.connect('localhost:27017/node-angular');
+// mongoose.connect('localhost:27017/node-angular');
+// for now we will hardcode this
+mongoose.connect('henry-user:testpassword@ds123410.mlab.com:23410/meantalk-deployment');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
