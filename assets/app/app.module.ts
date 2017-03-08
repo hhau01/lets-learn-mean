@@ -1,3 +1,4 @@
+import { ErrorComponent } from './errors/error.component';
 import { AuthService } from './auth/auth.service';
 import { SigninComponent } from './auth/signin.component';
 import { SignupComponent } from './auth/signup.component';
@@ -28,7 +29,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         HeaderComponent,
         LogOutComponent,
         SignupComponent,
-        SigninComponent
+        SigninComponent,
+        ErrorComponent
     ],
     imports: [
         BrowserModule, 
