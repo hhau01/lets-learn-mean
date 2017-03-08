@@ -5,6 +5,9 @@ import { User } from './user.model';
 import 'rxjs/Rx';
 import { Observable } from 'rxjs';
 
+const localhost = 'http://localhost:3000/';
+const heroku = 'https://meantalk-deployment.herokuapp.com/';
+
 @Injectable()
 export class AuthService {
 constructor(private http: Http, private errorService: ErrorService) {}
@@ -12,7 +15,7 @@ constructor(private http: Http, private errorService: ErrorService) {}
     signup(user: User) {
         const body = JSON.stringify(user);
         const headers = new Headers({'Content-Type': 'application/json'})
-        return this.http.post('http://localhost:3000/user', body, {headers: headers})
+        return this.http.post('https://meantalk-deployment.herokuapp.com/user', body, {headers: headers})
             .map((response: Response) => response.json())
             .catch((error: Response) => {
                 this.errorService.handleError(error.json());
@@ -23,7 +26,7 @@ constructor(private http: Http, private errorService: ErrorService) {}
     signin(user: User) {
         const body = JSON.stringify(user);
         const headers = new Headers({'Content-Type': 'application/json'})
-        return this.http.post('http://localhost:3000/user/signin', body, {headers: headers})
+        return this.http.post('https://meantalk-deployment.herokuapp.com/user/signin', body, {headers: headers})
             .map((response: Response) => response.json())
             .catch((error: Response) => {
                 this.errorService.handleError(error.json());
