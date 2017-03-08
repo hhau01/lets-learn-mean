@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
             <nav class="col-md-8 col-md-offset-2">
                 <ul class="nav nav-pills">
                     <!-- when routerLink is active -->
-                    <li routerLinkActive="active"><a [routerLink]="['/messages']">Messenger</a></li>
+                    <li routerLinkActive="active"><a [routerLink]="['/messages']">Messages</a></li>
                     <li routerLinkActive="active"><a [routerLink]="['/auth']">Authentication</a></li>   
                 </ul>
             </nav>
