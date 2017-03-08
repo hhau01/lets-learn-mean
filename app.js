@@ -10,6 +10,7 @@ var appRoutes = require('./routes/app');
 var messageRoutes = require('./routes/messages');
 var userRoutes = require('./routes/user');
 
+// last test
 var app = express();
 // mongoose.connect('localhost:27017/node-angular');
 // for now we will hardcode this
