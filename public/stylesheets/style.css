@@ -26,3 +26,12 @@ a.danger {
 input.ng-invalid.ng-touched {
   border: 1px solid red;
 }
+
+ul.editDelete {
+  white-space: nowrap;
+  width: 100%;
+  text-align: right;
+}
+.editDelete li {
+  display: inline;
+}
